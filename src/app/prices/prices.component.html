@@ -1,0 +1,30 @@
+<h1>Fuel Prices</h1>
+
+
+<form #form="ngForm">
+  <input type="text" placeholder="Enter state" name="state" [(ngModel)]="stateName"><br>
+  <span>enter average</span>
+  <input type="number" placeholder="Enter Vehicle average" name="average" [(ngModel)]="average"><br>
+  <span>enter distance</span>
+  <input type="number" placeholder="Enter Distance" name="distance" [(ngModel)]="distance"><br>
+  <span>number of people</span>
+  <input type="number" placeholder="Enter number of people" name="people" [(ngModel)]="people"><br>
+  <button (click)="onSubmit()">Calculate</button><br>
+
+
+
+</form>
+
+
+<h3>State Name:{{fuelData?.stateName}}</h3>
+<h3>Pertrol Price: {{fuelData?.fuel?.petrol?.retailPrice}}</h3>
+<h3>Diesel Price: {{fuelData?.fuel?.diesel?.retailPrice}} </h3>
+<h3>CNG Price:{{fuelData?.fuel?.cng?.retailPrice}} </h3>
+<h3>LPG Price:{{fuelData?.fuel?.lpg?.retailPrice}} </h3>
+
+
+<h2>Fare: {{result}}</h2>
+
+
+
+
