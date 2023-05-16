@@ -25,8 +25,11 @@ input{
   font-size: 1.5em;
   width: 350px;
   height: 2.5em;
-
-
+}
+select{
+  font-size: 1.5em;
+  width: 350px;
+  height: 2.5em;
 }
 span{
   font-size: 1.5em;

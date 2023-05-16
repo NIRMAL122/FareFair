@@ -10,12 +10,33 @@
     <form #form="ngForm">
 
       <span>Enter State Name</span>    <br>
-      <input type="text" matInput name="state" [(ngModel)]="stateName" required><br><br>
+      <select id="state" name="state" [(ngModel)]="stateName">
+          <option>Assam</option>
+          <option>Bihar</option>
+          <option>Chandigarh</option>
+          <option>Delhi</option>
+          <option>Goa</option>
+          <option>Haryana</option>
+          <option>HimachalPradesh</option>
+          <option>Kerala</option>
+          <option>Maharashtra</option>
+          <option>Punjab</option>
+          <option>Rajasthan</option>
+      </select><br><br>
+      <!-- <input type="text" matInput name="state" [(ngModel)]="stateName" required><br><br> -->
 
-      <span>Enter Vehicle Average</span>    <br>
+
+      <span>Enter Fuel Type</span>    <br>
+      <select id="fuel" name="fuelType" [(ngModel)]="fuelType">
+          <option>CNG</option>
+          <option>Diesel</option>
+          <option>Petrol</option>
+      </select><br><br>
+
+      <span>Enter Vehicle Mileage<span style="font-size:small">(km/lt)</span></span>   <br>
       <input type="number" matInput name="average" [(ngModel)]="average" required><br><br>
 
-      <span>Enter Distance</span>    <br>
+      <span>Enter Distance<span style="font-size:small">(kilometers)</span></span>    <br>
       <input type="number" matInput name="distance" [(ngModel)]="distance" required><br><br>
 
 

@@ -14,6 +14,7 @@ export class PricesComponent {
     private http: HttpClient
   ) {}
 
+
   fuelData?: FuelDetails;
 
   name: number = 0;
@@ -24,6 +25,7 @@ export class PricesComponent {
   people: number = 0;
   result: number = 0;
   fuelPrice?: number;
+  fuelType:string=''
 
   delay(ms: number): Promise<void> {
     return new Promise((resolve) => {
@@ -37,7 +39,19 @@ export class PricesComponent {
     console.log(typeof this.fuelData);
 
     if (this.fuelData !== undefined) {
-      this.fuelPrice = this.fuelData?.fuel?.petrol?.retailPrice;
+
+      if(this.fuelType=="CNG"){
+        this.fuelPrice = this.fuelData?.fuel?.cng?.retailPrice;
+      }
+      else if(this.fuelType=="Diesel"){
+        this.fuelPrice = this.fuelData?.fuel?.diesel?.retailPrice;
+      }
+      else
+      {
+        this.fuelPrice = this.fuelData?.fuel?.petrol?.retailPrice;
+      }
+
+
       this.result =
         ((this.distance / this.average) * this.fuelPrice) / this.people;
       console.log('final', this.result);
