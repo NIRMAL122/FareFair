@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { PricesComponent } from './prices/prices.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//materialImports
 // Add below imports to the Imports Section on the top of the page
 
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -49,17 +51,17 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, PricesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NoopAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    //material imports
     // Add below modules to the imports array
-
     MatAutocompleteModule,
     MatCheckboxModule,
     MatDatepickerModule,
@@ -96,8 +98,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatPaginatorModule,
     MatSortModule,
     MatTableModule,
-    FormsModule,
-    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

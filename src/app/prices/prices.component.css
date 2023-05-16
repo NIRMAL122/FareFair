@@ -1,0 +1,95 @@
+.maindiv{
+  height: 100%;
+}
+
+.brand{
+  border: 1px black solid;
+  background-color: black;
+  padding: 0%;
+
+}
+.calculator{
+  border: 1px black solid;
+  background-color: white;
+  display: flex;
+  padding: 20px;
+  height: 100%;
+
+
+
+  justify-content: center;
+  align-items: center;
+}
+
+input{
+  font-size: 1.5em;
+  width: 350px;
+  height: 2.5em;
+
+
+}
+span{
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+button{
+  background-color: black;
+  color: white;
+  outline: none;
+  width: 360px;
+  height: 2.5em;
+  font-size: 2em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.fare{
+  color: white;
+  font-size: 12em;
+  font-weight: 800;
+  padding: 0;
+  margin-top: 250px;
+  text-align: right;
+
+}
+
+.fair{
+  color: white;
+  font-size: 10em;
+  font-weight: 1000;
+  padding: 0;
+  margin-top: 100px;
+  text-align: right;
+  font-family:'Times New Roman', Times, serif;
+
+}
+
+.result{
+  width: 500px;
+  text-align: center;
+ border: 2px black dotted;
+
+
+ margin-left: 300px;
+ margin-bottom: 50px;
+
+}
+
+.resuldDiv{
+  margin-top: 0;
+  padding: 0;
+}
+
+.calc{
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
+
+
+
+
+
+

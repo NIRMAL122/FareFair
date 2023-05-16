@@ -1,30 +1,38 @@
-<h1>Fuel Prices</h1>
+<div class="col-xs-12 row maindiv">
+  <div class="col-xs-4 brand">
+    <h1 class="fare">FARE</h1>
+    <h1 class="fair">Fair</h1>
+
+  </div>
+  <div class="col-xs-8 calculator row">
+
+    <div class="row col-xs-12 calc">
+    <form #form="ngForm">
+
+      <span>Enter State Name</span>    <br>
+      <input type="text" matInput name="state" [(ngModel)]="stateName" required><br><br>
+
+      <span>Enter Vehicle Average</span>    <br>
+      <input type="number" matInput name="average" [(ngModel)]="average" required><br><br>
+
+      <span>Enter Distance</span>    <br>
+      <input type="number" matInput name="distance" [(ngModel)]="distance" required><br><br>
 
 
-<form #form="ngForm">
-  <input type="text" placeholder="Enter state" name="state" [(ngModel)]="stateName"><br>
-  <span>enter average</span>
-  <input type="number" placeholder="Enter Vehicle average" name="average" [(ngModel)]="average"><br>
-  <span>enter distance</span>
-  <input type="number" placeholder="Enter Distance" name="distance" [(ngModel)]="distance"><br>
-  <span>number of people</span>
-  <input type="number" placeholder="Enter number of people" name="people" [(ngModel)]="people"><br>
-  <button (click)="onSubmit()">Calculate</button><br>
+      <span>Enter number of People</span> <br>
+      <input type="number" name="people" [(ngModel)]="people" required><br><br>
 
 
+      <button (click)="onSubmit()">Calculate</button> <br><br><br>
 
-</form>
+      </form><br>
+    </div>
+    <div class="row col-xs-12 resuldDiv">
+      <input type="text" value="Calculated Fare per Perosn : ₹ {{result |number:'1.0-2'}}"
+      class="result" *ngIf="result>1">
 
+    </div>
 
-<h3>State Name:{{fuelData?.stateName}}</h3>
-<h3>Pertrol Price: {{fuelData?.fuel?.petrol?.retailPrice}}</h3>
-<h3>Diesel Price: {{fuelData?.fuel?.diesel?.retailPrice}} </h3>
-<h3>CNG Price:{{fuelData?.fuel?.cng?.retailPrice}} </h3>
-<h3>LPG Price:{{fuelData?.fuel?.lpg?.retailPrice}} </h3>
+  </div>
 
-
-<h2>Fare: {{result}}</h2>
-
-
-
-
+</div>
